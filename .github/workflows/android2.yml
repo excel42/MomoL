@@ -1,6 +1,9 @@
 name: Android CI
 
 on:
+  push: #develop branch에 push 할때 실행
+    branches: [ "develop" ]
+    
   pull_request: #develop branch에 PR을 보낼 때 실행
     branches: [ "develop" ]
 

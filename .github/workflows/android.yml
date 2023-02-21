@@ -23,11 +23,11 @@ jobs:
         - cd ./android/gradle
         - chmod +x gradlew
 
-    #Gradle 빌드
-    - name: Build with Gradle
-      run: 
-        - cd ./android/gradle
-        - ./gradlew build
+    # #Gradle 빌드
+    # - name: Build with Gradle
+    #   run: 
+    #     - cd ./android/gradle
+    #     - ./gradlew build
 
     #Gradle test
     - name: Test with Gradle

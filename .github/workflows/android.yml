@@ -1,6 +1,8 @@
 name: PR Test
 
 on:
+  push: 
+    branches: [ "develop" ] 
   pull_request: #develop branch에 PR시 실행 
     branches: [ "develop" ] 
 

@@ -24,9 +24,9 @@ jobs:
       run:  |
         yarn install
         cd ./android
-        ./android/chmod +x gradlew
+        ./chmod +x gradlew
     - name: Build with Gradle
       run:  |
         yarn install
         cd ./android
-        ./android/gradlew build
+        ./gradlew build

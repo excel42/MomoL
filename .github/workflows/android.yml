@@ -19,18 +19,21 @@ jobs:
 
     #Gradle wrappper 파일 실행 권한 주기
     - name: Grant execute permission for gradlew
-    - cd ./android/gradle
-      run: chmod +x gradlew
+      run: 
+        - cd ./android/gradle
+        - chmod +x gradlew
 
     #Gradle 빌드
     - name: Build with Gradle
-    - cd ./android/gradle
-      run: ./gradlew build
+      run: 
+        - cd ./android/gradle
+        - ./gradlew build
 
     #Gradle test
     - name : Test with Gradle
-    - cd ./android/gradle
-      run: ./gradlew --info test
+      run: 
+        - cd ./android/gradle
+        - ./gradlew --info test
 
     #테스트 후 Result 확인
       - name : Publish Unit Test Results

@@ -22,9 +22,9 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run:  |
-        ch ./android
+        cd ./android
         ./android/chmod +x gradlew
     - name: Build with Gradle
       run:  |
-        ch ./android
+        cd ./android
         ./android/gradlew build

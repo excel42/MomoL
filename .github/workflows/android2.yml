@@ -22,9 +22,11 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run:  |
+        yarn install
         cd ./android
         ./android/chmod +x gradlew
     - name: Build with Gradle
       run:  |
+        yarn install
         cd ./android
         ./android/gradlew build

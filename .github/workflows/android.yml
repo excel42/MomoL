@@ -23,11 +23,11 @@ jobs:
         - cd ./android/gradle
         - chmod +x gradlew
 
-    # #Gradle 빌드
-    # - name: Build with Gradle
-    #   run: 
-    #     - cd ./android/gradle
-    #     - ./gradlew build
+    #Gradle 빌드
+    - name: Build with Gradle
+      run: 
+        - cd ./android/gradle
+        - ./gradlew build
 
     #Gradle test
     - name: Test with Gradle
@@ -36,7 +36,7 @@ jobs:
         - ./gradlew --info test
 
     #테스트 후 Result 확인
-      - name : Publish Unit Test Results
+    - name : Publish Unit Test Results
       uses: EnricoMi/publish-unit-test-result-action@v1
       if: ${{ always() }}  
       with:

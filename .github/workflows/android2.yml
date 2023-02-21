@@ -1,9 +1,7 @@
 name: Android CI
 
 on:
-  push:
-    branches: [ "develop" ]
-  pull_request:
+  pull_request: #develop branch에 PR을 보낼 때 실행
     branches: [ "develop" ]
 
 jobs:
@@ -20,13 +18,22 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Grant execute permission for gradlew
+      #gradle wrappper 파일 실행 권한 주기
+    - name: Grant execute permission for gradlew 
       run:  |
         cd ./android
         chmod +x gradlew
-
-    - name: Build with Gradle
+    
+          #gradle 빌드 실행
+    - name: Test with Gradle
       run:  |
         yarn install
         cd ./android
-        ./gradlew build
+        ./gradlew --info test
+
+      #gradle 빌드 실행
+    # - name: Build with Gradle
+    #   run:  |
+    #     yarn install
+    #     cd ./android
+    #     ./gradlew build

@@ -30,7 +30,7 @@ jobs:
         - ./gradlew build
 
     #Gradle test
-    - name : Test with Gradle
+    - name: Test with Gradle
       run: 
         - cd ./android/gradle
         - ./gradlew --info test

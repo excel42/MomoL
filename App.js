@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-import { NavigationContainer } from '@react-navigation/native';
+// import { NavigationContainer } from '@react-navigation/native';
 import { RootNavigator } from './src/navigation/RootNavigator';
 
 import LoadingScreen from './src/screens/LoadingScreen';
